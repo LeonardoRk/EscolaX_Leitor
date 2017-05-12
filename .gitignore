@@ -1,0 +1,6 @@
+# ignore bundler config.
+/.bundle
+
+# ignore vagrant folder
+.vagrant/
+
