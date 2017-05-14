@@ -1,8 +1,15 @@
 
+<p> <%=@title%> </p>
 
-<form>
+<!-- Field of barcode to look for alumn -->
+<form method="get" action="/reader">
   <div class="form-group" style="width:15%; margin:0 auto;" >
-    <input type="text" class="form-control" id="mat" placeholder="Matrícula" autofocus='true' maxlength="6" >
+  	
+    <input type="text" class="form-control" placeholder="Bar Code" autofocus='true' maxlength="6" 
+    		name="bar_code">
   </div>
 </form>
-<img src="home/leonardo/Área%20de%20Trabalho/PastaEscolaX/EscolaX_Leitor/Escola%20X%20Leitor/app/assets/images/escola.jpg" class="img-responsive" alt="Escola do Gama">
+
+
+<!-- Image of gama's school -->
+<img src="" class="img-responsive" alt="Escola do Gama">
