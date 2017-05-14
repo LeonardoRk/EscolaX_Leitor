@@ -3,7 +3,7 @@
 <form>
   <div class="form-group" style="width:15%; margin:0 auto;" >
     <%= form_tag(alumns_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Busca aluno", autofocus: true %>
+        <%= text_field_tag :search, params[:search], placeholder: "Busca aluno", autofocus: true, :minlength => 5 %>
         <%= submit_tag "Search", :name => nil %>
     <% end %>
   </div>
@@ -11,12 +11,13 @@
 <img src="home/leonardo/Área%20de%20Trabalho/PastaEscolaX/EscolaX_Leitor/Escola%20X%20Leitor/app/assets/images/escola.jpg" class="img-responsive" alt="Escola do Gama">
 
 <% if @alumns.blank? %>
-  <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+  <h4>Não existe nenhum registro com o valor <%= params[:search] %>.</h4>
 <% else %>
   <% @alumns.each do |alumn| %>
   <p>
     <%= alumn.name %><br>
-    <%= alumn.registry %>
+    <%= alumn.registry %><br>
+    <%= Time.now.strftime("%B %e, %Y at %I:%M %p")%>
   </p>
   <% end %>
 <% end %>
