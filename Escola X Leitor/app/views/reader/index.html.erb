@@ -1,12 +1,19 @@
 
-<p> <%=@title%> </p>
-
+<% if @alumn != nil%>
+  <h4>Nome: </h4><%= @alumn.name%><br>
+  <h4>Matrícula: </h4><%= @alumn.registry%><br>
+  <h4>Entrada/Saída: </h4><%= Time.now.strftime("%d/%m/%y %H:%M")%><br>
+<% end %>
 <!-- Field of barcode to look for alumn -->
-<form method="get" action="/reader">
+<form>
   <div class="form-group" style="width:15%; margin:0 auto;" >
+    <%= form_tag(alumns_path, :method => 'get' ) do %>
+      <p>
+        <%= text_field_tag :bar_code, params[:bar_code], minlength: 5 %>
+        <%= submit_tag "Código", :name => nil %>
+      </p>
+    <% end %>
 
-    <input type="text" class="form-control" placeholder="Bar Code" autofocus='true' maxlength="6"
-    		name="bar_code">
   </div>
 </form>
 
