@@ -1,9 +1,8 @@
-Rails.application.routes.draw do 
-	resources :alumns
+Rails.application.routes.draw do
+	resources :alumns, controller: 'reader'
 	resources :parents
 
+	get '/reader/index'
 	root 'reader#index'
-
-	get '/reader' , to:'reader#index'
 
 end
