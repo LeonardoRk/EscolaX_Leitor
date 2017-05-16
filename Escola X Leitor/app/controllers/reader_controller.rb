@@ -6,7 +6,8 @@ class ReaderController < ApplicationController
 			alumn_with_equal_bar_code = Alumn.find_by bar_code: bar_code
 			
 			if alumn_with_equal_bar_code != nil
-				@title = "Value: " + bar_code
+				@title = alumn_with_equal_bar_code[:address] + " " + alumn_with_equal_bar_code[:name]
+				#@title = "Value: " + bar_code
 			else
 				# nothing to do in here
 			end
@@ -17,9 +18,4 @@ class ReaderController < ApplicationController
 
 	end
 
-
-	private 
-	def get_alumn_on_database
-		
-	end
 end
