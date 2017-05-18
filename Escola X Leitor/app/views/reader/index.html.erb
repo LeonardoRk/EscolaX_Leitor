@@ -1,22 +1,19 @@
 
-<% if @alumn != nil%>
-  <h4>Nome: </h4><%= @alumn.name%><br>
-  <h4>Matrícula: </h4><%= @alumn.registry%><br>
-  <h4>Entrada/Saída: </h4><%= Time.now.strftime("%d/%m/%y %H:%M")%><br>
-<% end %>
 <!-- Field of barcode to look for alumn -->
 <form>
   <div class="form-group" style="width:15%; margin:0 auto;" >
     <%= form_tag(alumns_path, :method => 'get' ) do %>
-      <p>
         <%= text_field_tag :bar_code, params[:bar_code], minlength: 5 , placeholder: "Código de barras" , value: "" , autofocus: "True"%>
-       	
-      </p>
     <% end %>
 
   </div>
 </form>
 
+<% if @alumn != nil%>
 
-<!-- Image of gama's school -->
-<img src="home/leonardo/Área de Trabalho/PastaEscolaX/EscolaX_Leitor.wiki/images/escolaInicial.jpg" alt="Escola do Gama">
+  <center>
+    <%= ("<img id =  'profile-image' width = '600' height = '550' alt='image' class= 'list_image' src='data:image/jpg;base64,%s'>" % Base64.encode64(@alumn.image)).html_safe %><br>
+  </center>
+<% end %>
+  
+
