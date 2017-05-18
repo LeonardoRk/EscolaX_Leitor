@@ -2,16 +2,17 @@ require 'rails_helper'
 
 RSpec.describe ReaderController, type: :controller do
 
-	describe "GET new" do
-    	before(:each) do
-      		login_principal
-    	end
+  	describe "GET index" do
 
-    	it "assigns a new alumn as @alumn" do
-      		get :new, params:{parent_id:parent.id}
-      		expect(assigns(:alumn)).to be_a_new(Alumn)
-    	end
-  	end
+  		it "text if get alumns correctlly" do
+  			alumn = Alumn.create(:bar_code => "123455" , :name => "leonardo")
+  			get :index , params: {:bar_code=>"123455"}
+  			expect(assigns(:alumn)).to eq(alumn) 
+  		end
+ 	end
+
+  	
+
 
 end
 
