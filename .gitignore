@@ -23,3 +23,13 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore vagrant folder
+.vagrant/
+
+# Ignore vim swap files
+*.swp
+
+# Ignore metrics files
+metrics/*.txt
+
