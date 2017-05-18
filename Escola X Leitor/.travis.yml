@@ -10,6 +10,8 @@ rvm:
  - jruby
  - rbx-2
  script:
-  - bundle exec rspec spec
+
+  - bundle exec rspec spec 
+
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
