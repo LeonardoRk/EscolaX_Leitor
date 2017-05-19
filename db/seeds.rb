@@ -12,26 +12,54 @@
 require 'sqlite3'
 
 begin
+	db = SQLite3::Database.open 'db/development.sqlite3'
+	initialPath = "app/assets/images/"
+	photoIndex = 1;
+	finalPath = ".jpg"
 
-    fin = File.open("app/assets/images/escolaInicial.jpg" , "rb")
-    img = fin.read
-    
-rescue SystemCallError => e      
-    puts e
-ensure
-    fin.close if fin 
-end
+	numberOfPhotos = 5
+	alumnsPhotos = Array.new(numberOfPhotos)       
+	
 
-begin
-    db = SQLite3::Database.open 'db/development.sqlite3'
+	for i in (1 .. numberOfPhotos )
+		photoFile = initialPath + photoIndex.to_s + finalPath
+		photoIndex = photoIndex + 1
+		fin = File.open(photoFile , "rb")
 
-    db.execute "insert into alumns(name , image , created_at , updated_at) values('leonardo' , ? , '12:30:40' , '12:40:40')" , img
-    
-rescue SQLite3::Exception => e 
-    
-    puts "Exception occurred here"
-    puts e
-    
-ensure
-    db.close if db
+    	img = fin.read
+    	alumnsPhotos[i] = img
+
+    	fin.close if fin 
+		
+	end
+
+    for i in (1 .. numberOfPhotos)
+    	bar_code = i.to_s + i.to_s + i.to_s + i.to_s + i.to_s + i.to_s
+    	db.execute "insert into alumns(name , image , bar_code , created_at , updated_at) 
+    				values( ? , ? , ? , '12:30:40' , '12:40:40')" , i.to_s , alumnsPhotos[i] , bar_code
+     
+    end
+
+	ensure
+    	db.close if db
+
+    for i in (1 .. numberOfPhotos)
+    	bar_code = i.to_s + i.to_s + i.to_s + i.to_s + i.to_s + i.to_s
+    	alumn = Alumn.find_by_bar_code bar_code
+
+    	if alumn.bar_code  == "111111"
+    		alumn.update :name => 'Leonardo Arthur'
+    	elsif alumn.bar_code  == "222222"
+    		alumn.update :name => 'Filipe Coelho'
+    	elsif alumn.bar_code  == "333333"
+    		alumn.update :name => 'Matheus Batista'
+    	elsif alumn.bar_code  == "444444"
+    		alumn.update :name => 'André Filho'
+    	elsif alumn.bar_code  == "555555"
+    		alumn.update :name => 'To no nargs'
+    	else
+    		# nothing to do
+    	end
+    	
+    end
 end

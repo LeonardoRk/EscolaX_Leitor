@@ -3,17 +3,24 @@
 <form>
   <div class="form-group" style="width:15%; margin:0 auto;" >
     <%= form_tag(alumns_path, :method => 'get' ) do %>
-        <%= text_field_tag :bar_code, params[:bar_code], minlength: 5 , placeholder: "Código de barras" , value: "" , autofocus: "True"%>
+        <%= text_field_tag :bar_code, params[:bar_code] , placeholder: "Código de barras" , value: "" , autofocus: "True"%>
     <% end %>
 
   </div>
 </form>
 
 <% if @alumn != nil%>
-
-  <center>
-    <%= ("<img id =  'profile-image' width = '600' height = '550' alt='image' class= 'list_image' src='data:image/jpg;base64,%s'>" % Base64.encode64(@alumn.image)).html_safe %><br>
-  </center>
+	<div class="container">
+		<br>
+		<center>
+			<%= ("<img id =  'profile-image' width = '600' height = '550' alt='image' class= 'list_image' src='data:image/jpg;base64,%s'>" % Base64.encode64(@alumn.image)).html_safe %><br>
+	  	</center>
+  	</div>
+  	<div>
+  		<center>
+  			<h3> <%= @alumn.name %> </h3>
+  		</center>
+  	</div>
 <% end %>
   
 
