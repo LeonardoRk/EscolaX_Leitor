@@ -56,10 +56,12 @@ begin
     	elsif alumn.bar_code  == "444444"
     		alumn.update :name => 'André Filho'
     	elsif alumn.bar_code  == "555555"
-    		alumn.update :name => 'To no nargs'
+    		alumn.update :name => 'Meu nome é dougras'
     	else
     		# nothing to do
     	end
     	
     end
+
+    
 end

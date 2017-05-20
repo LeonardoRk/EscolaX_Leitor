@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/vagrant/Escola X Leitor/spec/controllers/reader_controller_spec.rb": [
+      "/vagrant/spec/controllers/reader_controller_spec.rb": [
         1,
         null,
         1,
@@ -10,7 +10,6 @@
         null,
         1,
         1,
-        null,
         1,
         1,
         null,
@@ -22,7 +21,7 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/spec/rails_helper.rb": [
+      "/vagrant/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -81,14 +80,14 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/environment.rb": [
+      "/vagrant/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/vagrant/Escola X Leitor/config/application.rb": [
+      "/vagrant/config/application.rb": [
         1,
         null,
         1,
@@ -99,18 +98,20 @@
         null,
         1,
         1,
+        1,
+        null,
         null,
         null,
         null,
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/boot.rb": [
+      "/vagrant/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/vagrant/Escola X Leitor/config/environments/test.rb": [
+      "/vagrant/config/environments/test.rb": [
         1,
         null,
         null,
@@ -154,7 +155,7 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/initializers/application_controller_renderer.rb": [
+      "/vagrant/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -162,7 +163,7 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/initializers/assets.rb": [
+      "/vagrant/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -175,7 +176,7 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/initializers/backtrace_silencers.rb": [
+      "/vagrant/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -184,20 +185,20 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/initializers/cookies_serializer.rb": [
+      "/vagrant/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/vagrant/Escola X Leitor/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/vagrant/Escola X Leitor/config/initializers/inflections.rb": [
+      "/vagrant/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/vagrant/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -215,13 +216,13 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/initializers/mime_types.rb": [
+      "/vagrant/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/initializers/new_framework_defaults.rb": [
+      "/vagrant/config/initializers/new_framework_defaults.rb": [
         null,
         null,
         null,
@@ -247,12 +248,12 @@
         null,
         1
       ],
-      "/vagrant/Escola X Leitor/config/initializers/session_store.rb": [
+      "/vagrant/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/vagrant/Escola X Leitor/config/initializers/wrap_parameters.rb": [
+      "/vagrant/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -268,7 +269,7 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/config/routes.rb": [
+      "/vagrant/config/routes.rb": [
         1,
         1,
         1,
@@ -278,19 +279,21 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/app/helpers/application_helper.rb": [
+      "/vagrant/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/vagrant/Escola X Leitor/app/controllers/reader_controller.rb": [
+      "/vagrant/app/controllers/reader_controller.rb": [
         1,
         1,
         1,
         null,
         1,
+        null,
         1,
         null,
-        null,
+        1,
+        1,
         null,
         null,
         null,
@@ -298,19 +301,20 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/app/controllers/application_controller.rb": [
+      "/vagrant/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
         null
       ],
-      "/vagrant/Escola X Leitor/spec/models/alumn_spec.rb": [
+      "/vagrant/spec/models/alumn_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/vagrant/Escola X Leitor/app/models/alumn.rb": [
+      "/vagrant/app/models/alumn.rb": [
         1,
         null,
         1,
@@ -319,23 +323,34 @@
         null,
         null
       ],
-      "/vagrant/Escola X Leitor/app/models/application_record.rb": [
+      "/vagrant/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/vagrant/Escola X Leitor/spec/models/parent_spec.rb": [
+      "/vagrant/spec/models/frequency_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/vagrant/Escola X Leitor/app/models/parent.rb": [
+      "/vagrant/app/models/frequency.rb": [
+        1,
+        null
+      ],
+      "/vagrant/spec/models/parent_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/vagrant/app/models/parent.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1495121920
+    "timestamp": 1495251312
   }
 }
